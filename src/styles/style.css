@@ -1,0 +1,279 @@
+@import url(variants.css);
+@import url(tipography.css);
+@import url(checkbox.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-primary);
+  background-image: url("/src/assets/Shapes.svg");
+  color: var(--content-primary);
+  font-family: var(--font-family-sora);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6.25rem;
+}
+
+#logo {
+  display: flex;
+  gap: 0.6875rem;
+  max-width: 100rem;
+  width: 100%;
+}
+#logoText {
+  color: var(--content-primary);
+  font-weight: var(--display-large-weight);
+}
+
+.container {
+  padding-block: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.75rem;
+  max-width: 100rem;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.p_title {
+  background-image: var(--gradient-content);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.content h1 {
+  margin-top: 0.75rem;
+  font-size: var(--display-large-size);
+}
+
+#questions {
+  padding-top: 2.5rem;
+  max-width: 386px;
+}
+
+.p_title_questions {
+  font: var(--paragraph-medium-size);
+  color: var(--content-brand);
+}
+
+.p_explication {
+  font: var(--paragraph-small-size);
+  color: var(--content-secondary);
+}
+
+.hgi-question {
+  color: var(--content-brand);
+  font-size: 1.25rem;
+}
+
+.item {
+  padding-top: 2.25rem;
+}
+
+.content_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content_result {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.result_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hgi-replay {
+  font-size: 24px;
+}
+
+.content_number {
+  height: 6.25rem;
+  display: flex;
+  align-items: center; 
+}
+
+.number_result {
+  font: var(--overline-size);
+  color: var(--content-brand);
+}
+
+.content_formTeste {
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.label_title {
+  font: var(--label-medium-size)
+}
+
+.p_subTitle {
+  font: var(--paragraph-large-size);
+  color: var(--content-secondary);
+}
+
+.input_title {
+  font: var(--label-medium-size);
+  color: var(--content-secondary);
+}
+
+.grup {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.label_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input_number {
+  background-color: var(--background-secondary);
+  border: none;
+  width: 7.5rem;
+  height: 4rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font: var(--display-small-size);
+  color: var(--content-primary);
+  text-align: center;
+  -webkit-appearance: none;
+}
+
+.input_number:hover {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#24222E, #24222E) padding-box,
+    var(--gradient-border) border-box;
+  border-radius: 8px;
+}
+
+.input_number:focus, textarea:focus {
+  outline: none;
+}
+
+.btn {
+  width: 746px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--background-tertiary);
+  border: none;
+  font: var(--label-medium-size);
+  color: var(--content-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.hgi-arrow-right-02 {
+  display: inline-block;
+}
+
+.btn:hover {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--background-secondary),var(--background-secondary)) padding-box,
+    var(--gradient-border) border-box;
+  border-radius: 8px;
+}
+
+.btn:hover .hgi-arrow-right-02 {
+  animation: moveArrow 1s ease-in-out infinite;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input_number::-webkit-outer-spin-button,
+.input_number::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input_number[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.disable {
+  display: none;
+}
+
+.btn_result {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content_number {
+  gap: 48px;
+  animation: showUp 1s ease-out forwards;
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    
+  }
+  to {
+    opacity: 1;
+    
+  }
+}

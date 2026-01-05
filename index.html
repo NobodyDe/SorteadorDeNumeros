@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <title>Sorteador de Números</title>
+  </head>
+  <body>
+    <div id="logo">
+      <img src="/src/assets/logo.svg" alt="Numberslogo" />
+      <h1 id="logoText">NUMBERS</h1>
+    </div>
+    <div class="container">
+      <div class="content">
+        <p class="p_title">ONLINE - GRATUITO</p>
+        <h1>SORTEADOR DE NÚMEROS</h1>
+
+        <div id="questions">
+          <div class="item">
+            <i class="hgi hgi-stroke hgi-question"></i>
+            <p class="p_title_questions">
+              Como funciona o sorteador de números?
+            </p>
+            <p class="p_explication">
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
+          <div class="item">
+            <i class="hgi hgi-stroke hgi-question"></i>
+            <p class="p_title_questions">
+              Posso escolher o intervalo dos números?
+            </p>
+            <p class="p_explication">
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content_form">
+        <div class="content_formTeste">
+        <div class="title">
+          <label class="label_title">QUERO SORTEAR:</label>
+          <p class="p_subTitle">
+            defina o intervalo e a quantidade de números, clique em "Somar" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
+        <form class="form">
+          <div class="grup">
+            <div class="label_input">
+              <label for="" class="input_title">NÚMEROS</label>
+              <input type="number" class="input_number" id="quanty" required />
+            </div>
+            <div class="label_input">
+              <label for="" class="input_title">DE</label>
+              <input type="number" class="input_number" id="num1" required />
+            </div>
+            <div class="label_input">
+              <label for="" class="input_title">A</label>
+              <input type="number" class="input_number" id="num2" required />
+            </div>
+          </div>
+          <div>
+            <div class="checkbox-wrapper-2">
+              <input id="checkbox" type="checkbox" class="sc-gJwTLC ikxBAC" />
+              <p>Não repetir número</p>
+            </div>
+          </div>
+          <button class="btn" type="submit">
+            SORTEAR
+            <i class="hgi hgi-stroke hgi-arrow-right-02"></i>
+          </button>
+        </form>
+        
+      </div>
+      <div class="content_result disable">
+        <div class="result_title">
+          <label class="label_title">RESULTADO DO SORTEIO</label>
+          <p class="p_subTitle">1º RESULTADO</p>
+        </div>
+        <div class="content_number">
+        </div>
+        <button class="btn btn_result" onClick="window.location.reload()">
+            SORTEAR NOVAMENTE
+            <i class="hgi hgi-stroke hgi-replay"></i>
+          </button>
+      </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

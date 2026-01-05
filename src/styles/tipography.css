@@ -1,0 +1,71 @@
+:root {
+  /* -------------------------------------- */
+  /*                FONT FAMILY             */
+  /* -------------------------------------- */
+  --font-family-sora: "Sora", sans-serif;
+  --font-family-roboto-mono: "Roboto Mono", monospace;
+  --font-family-roboto-flex: "Roboto Flex", sans-serif;
+
+  /* -------------------------------------- */
+  /*                SORA                    */
+  /* -------------------------------------- */
+  /* display large */
+  --display-large-size: 72px;
+  --display-large-line-height: 130%;
+  --display-large-weight: 800; /* ExtraBold */
+  --display-large-case: uppercase;
+
+  /* display medium */
+  --display-medium-size: 40px;
+  --display-medium-line-height: 130%;
+  --display-medium-weight: 800; /* ExtraBold */
+  --display-medium-case: uppercase;
+
+  /* display small */
+  --display-small-size: 700 2rem/1.3rem "Sora";
+  --display-small-line-height: 130%;
+  --display-small-weight: 700; /* Bold */
+  --display-small-case: uppercase;
+
+  /* -------------------------------------- */
+  /*             ROBOTO MONO                */
+  /* -------------------------------------- */
+  /* overline */
+  --overline-size: 700 3rem/1.5rem "Roboto Mono";
+  --overline-line-height: 150%;
+  --overline-weight: 700; /* Bold */
+  --overline-case: uppercase;
+
+  /* -------------------------------------- */
+  /*             ROBOTO FLEX                */
+  /* -------------------------------------- */
+  /* paragraph large */
+  --paragraph-large-size: 500 1rem/1.5rem "Sora";
+  --paragraph-large-line-height: 150%;
+  --paragraph-large-weight: 500; /* Medium */
+  --paragraph-large-case: none;
+
+  /* paragraph medium */
+  --paragraph-medium-size: 500 14px/1.5rem "Sora";
+  --paragraph-medium-line-height: 150%;
+  --paragraph-medium-weight: 500; /* Medium */
+  --paragraph-medium-case: none;
+
+  /* paragraph small */
+  --paragraph-small-size: 500 0.75rem/1.25rem "Sora";
+  --paragraph-small-line-height: 150%;
+  --paragraph-small-weight: 500; /* Medium */
+  --paragraph-small-case: none;
+
+  /* label medium */
+  --label-medium-size: 700 1.25rem/1.5rem "Sora";
+  --label-medium-line-height: 150%;
+  --label-medium-weight: 700; /* Bold */
+  --label-medium-case: none;
+
+  /* label small */
+  --label-small-size: 16px;
+  --label-small-line-height: 150%;
+  --label-small-weight: 700; /* Bold */
+  --label-small-case: none;
+}
