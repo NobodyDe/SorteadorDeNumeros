@@ -3,10 +3,25 @@ const btn = document.querySelector(".btn");
 const quanty = document.querySelector("#quanty");
 const num1 = document.querySelector("#num1");
 const num2 = document.querySelector("#num2");
-const checkbox = document.querySelector("#checkbox")
-const contentForm = document.querySelector(".content_formTeste")
-const contentResult = document.querySelector(".content_result")
-const contentNumber = document.querySelector(".content_number")
+const checkbox = document.querySelector("#checkbox");
+const contentForm = document.querySelector(".content_formTeste");
+const contentResult = document.querySelector(".content_result");
+const contentNumber = document.querySelector(".content_number");
+
+function limitedCaracter(input) {
+  const limited = parseInt(input.getAttribute("maxlength"));
+  input.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (input.value.length > limited) {
+      input.value = input.value.substring(0, limited);
+    }
+    console.log(input.value);
+  });
+}
+
+limitedCaracter(quanty);
+limitedCaracter(num1);
+limitedCaracter(num2);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -25,39 +40,40 @@ form.addEventListener("submit", (e) => {
   }
 
   while (quantyArr.length <= quantyNumber - 1) {
-    const sorterdNumber = ramdowNumber(number1, number2)
+    const sorterdNumber = ramdowNumber(number1, number2);
     if (checkbox.checked) {
       if (!quantyArr.includes(sorterdNumber)) {
-        quantyArr.push(sorterdNumber)
+        quantyArr.push(sorterdNumber);
       }
-
     } else {
-            quantyArr.push(sorterdNumber)
+      quantyArr.push(sorterdNumber);
     }
   }
-  console.log(quantyArr)
+  console.log(quantyArr);
 
-  contentResult.classList.remove("disable")
-  contentForm.classList.add("disable")
+  contentResult.classList.remove("disable");
+  contentForm.classList.add("disable");
 
   function createResult(tag, atributtes = {}) {
-    const element = document.createElement(tag)
+    const element = document.createElement(tag);
 
-    Object.entries(atributtes).forEach(([key, value]) => element.setAttribute(key,value))
+    Object.entries(atributtes).forEach(([key, value]) =>
+      element.setAttribute(key, value)
+    );
 
-    return element
+    return element;
   }
 
-  quantyArr.forEach((number) =>{
-    const result = createResult("h1",{class: "number_result"})
+  quantyArr.forEach((number) => {
+    const result = createResult("h1", { class: "number_result" });
 
-    result.innerText = number
-    contentNumber.appendChild(result)
-    
-  })
-   
-   
+    result.innerText = number;
+    contentNumber.appendChild(result);
+  });
 
-  
-  
+  console.log(quanty.value.length);
 });
+
+function countCaracter() {
+  console.log("oi");
+}

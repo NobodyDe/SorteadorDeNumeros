@@ -65,53 +65,72 @@
 
       <div class="content_form">
         <div class="content_formTeste">
-        <div class="title">
-          <label class="label_title">QUERO SORTEAR:</label>
-          <p class="p_subTitle">
-            defina o intervalo e a quantidade de números, clique em "Somar" e
-            veja os resultados na tela. É rápido e fácil!
-          </p>
-        </div>
-        <form class="form">
-          <div class="grup">
-            <div class="label_input">
-              <label for="" class="input_title">NÚMEROS</label>
-              <input type="number" class="input_number" id="quanty" required />
-            </div>
-            <div class="label_input">
-              <label for="" class="input_title">DE</label>
-              <input type="number" class="input_number" id="num1" required />
-            </div>
-            <div class="label_input">
-              <label for="" class="input_title">A</label>
-              <input type="number" class="input_number" id="num2" required />
-            </div>
+          <div class="title">
+            <label class="label_title">QUERO SORTEAR:</label>
+            <p class="p_subTitle">
+              defina o intervalo e a quantidade de números, clique em "Somar" e
+              veja os resultados na tela. É rápido e fácil!
+            </p>
           </div>
-          <div>
-            <div class="checkbox-wrapper-2">
-              <input id="checkbox" type="checkbox" class="sc-gJwTLC ikxBAC" />
-              <p>Não repetir número</p>
+          <form class="form">
+            <div class="grup">
+              <div class="label_input">
+                <label for="" class="input_title">NÚMEROS</label>
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  class="input_number"
+                  id="quanty"
+                  maxlength="3"
+                  required
+                />
+              </div>
+              <div class="label_input">
+                <label for="" class="input_title">DE</label>
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  class="input_number"
+                  id="num1"
+                  maxlength="5"
+                  required
+                />
+              </div>
+              <div class="label_input">
+                <label for="" class="input_title">A</label>
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  class="input_number"
+                  id="num2"
+                  maxlength="5"
+                  required
+                />
+              </div>
             </div>
+            <div>
+              <div class="checkbox-wrapper-2">
+                <input id="checkbox" type="checkbox" class="sc-gJwTLC ikxBAC" />
+                <p>Não repetir número</p>
+              </div>
+            </div>
+            <button class="btn" type="submit">
+              SORTEAR
+              <i class="hgi hgi-stroke hgi-arrow-right-02"></i>
+            </button>
+          </form>
+        </div>
+        <div class="content_result disable">
+          <div class="result_title">
+            <label class="label_title">RESULTADO DO SORTEIO</label>
+            <p class="p_subTitle">1º RESULTADO</p>
           </div>
-          <button class="btn" type="submit">
-            SORTEAR
-            <i class="hgi hgi-stroke hgi-arrow-right-02"></i>
-          </button>
-        </form>
-        
-      </div>
-      <div class="content_result disable">
-        <div class="result_title">
-          <label class="label_title">RESULTADO DO SORTEIO</label>
-          <p class="p_subTitle">1º RESULTADO</p>
-        </div>
-        <div class="content_number">
-        </div>
-        <button class="btn btn_result" onClick="window.location.reload()">
+          <div class="content_number"></div>
+          <button class="btn btn_result" onClick="window.location.reload()">
             SORTEAR NOVAMENTE
             <i class="hgi hgi-stroke hgi-replay"></i>
           </button>
-      </div>
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
